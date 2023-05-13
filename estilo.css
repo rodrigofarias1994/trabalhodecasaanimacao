@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
+    background-color: #df3894;
+    position: relative;
+    animation: changeBackgroundColor 7s infinite ease-in-out alternate-reverse;    
+    transition: 500ms linear; 
+    transition: all 1s;
+    cursor: pointer;
+    
+   
+    
+}
+
+.logo:hover{
+
+    transform: scale(1.1);
+    -webkit-transform: rotateZ(360deg) ;
+    transform: rotateZ(360deg);
+    animation-duration: infinite;
+    transition: all .5s;
+    animation: changeBackgroundColor 1s;
+    
+    
+}
+
+
+
+@keyframes changeBackgroundColor {
+    0% {
+      background-color:  #0602ff  ; 
+
+    }
+    25%{
+        background-color: #8f8d8d;
+    }
+    50% {
+      background-color: #09eb89 ;
+    }
+    
+    75%{
+        background-color: red;
+    }
+    100% {
+      background-color: #f1f440;
+    }
+  }
+
+  .logo .maiorq{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.logo .maiorq::after,
+.logo .maiorq::before{
+    content: "";
+    width: 30px;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo .maiorq::before{
+    width: 8px;
+    height: 30px;
+    left: initial;
+    right: 0;
+}
+.logo .underline{
+    width: 25px;
+    height: 7px;
+    background-color: white;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
+
+
